@@ -4,8 +4,6 @@ const hbs = require("hbs");
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
-console.log(__dirname);
-console.log(path.join(__dirname, "../public"));
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -98,7 +96,7 @@ app.get("*",(req,res)=>{
         name: "Vincent Chen"
     });
 });
-console.log(Date.now());
+
 app.listen(port, () => {
     console.log("Server is up on port "+port+".");
 });
